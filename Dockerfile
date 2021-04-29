@@ -1,5 +1,6 @@
 FROM ocaml/opam2:alpine-3.10-opam
 USER root
+LABEL org.opencontainers.image.source=https://github.com/kuis-isle3sw/ocaml-docker
 RUN apk add m4
 RUN opam init --disable-sandboxing -y
 RUN opam install menhir dune ounit -y --verbose
